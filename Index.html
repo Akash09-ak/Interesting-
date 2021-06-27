@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00796b;
+      }
+      .center-div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #00796b;
+        position: relative;
+      }
+      .outer-ring {
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        border-top: 8px solid rgb(185, 182, 182);
+        border-bottom: 8px solid rgb(185, 182, 182);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        animation: rotatering 2s linear infinite;
+      }
+      .middle-ring {
+        height: 140px;
+        width: 140px;
+        border-radius: 50%;
+        border-top: 8px solid rgb(241, 232, 232);
+        border-bottom: 8px solid rgb(241, 232, 232);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        animation: rotatering 2s linear infinite reverse;
+      }
+      .inner-ring {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border-top: 8px solid rgb(185, 182, 182);
+        border-bottom: 8px solid rgb(185, 182, 182);
+        border-left: 8px solid transparent;
+        border-right: 8px solid transparent;
+        position: absolute;
+        animation: rotatering 2s linear infinite;
+      }
+
+      .dot {
+        height: 60px;
+        width: 60px;
+        border-radius: 50%;
+        background-color: whitesmoke;
+        animation: rotatering 2s linear infinite;
+      }
+
+      @keyframes rotatering {
+        0% {
+          transform: rotate(0deg) scale(0.5);
+        }
+        100% {
+          transform: rotate(360deg) scale(1.2);
+        }
+      }
+    </style>
+    <title>Let's Hypnotize</title>
+  </head>
+  <body>
+    <div class="center-div">
+      <div class="outer-ring"></div>
+      <div class="middle-ring"></div>
+      <div class="inner-ring"></div>
+      <div class="dot"></div>
+    </div>
+  </body>
+</html>
